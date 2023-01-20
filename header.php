@@ -20,12 +20,21 @@
         <?php 
         // Za ubacivanje asinhronog JS nakon sto se body ucita
         // Google analytics i Pixel - custom code
-        wp_body_open();?>
+        if (function_exists (' wp_body_open')){
+            wp_body_open();
+        }
+       ?>
 
 
+<div id="page" class="site">
 
-    <header>
+    <header id="masthead" class="site-header" role="banner">
+        <?php get_template_part('template-parts/header/nav'); ?>
+
         <p>Header deo</p>
 
     </header>
+
+</div>
+<div id="content" class="site-content"_
 
